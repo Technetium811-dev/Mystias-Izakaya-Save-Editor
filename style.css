@@ -1,0 +1,137 @@
+
+/* ================= BASE ================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #23100c;
+  color: #fff;
+  margin: 20px;
+}
+
+/* ================= SECTION ================= */
+.section {
+  margin-bottom: 20px;
+}
+
+/* ================= GRID SYSTEM ================= */
+.grid {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Small icon grids */
+#itemGrid,
+#clothingGrid,
+#recipeGrid,
+#upgradeGrid,
+#uniqueCookwareGrid,
+#progressiveCookwareGrid {
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+}
+
+/* Staff grid (larger portraits) */
+#staffGrid {
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+}
+
+/* ================= TILE ================= */
+.item {
+  width: 64px;
+  height: 64px;
+
+  background: #6e462e;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: transform 0.1s ease, filter 0.2s ease;
+  overflow: hidden;
+  transform: scale(0.95);
+  opacity: 0.25;
+}
+
+/* hover feedback */
+.item:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  outline: 0px solid #00ff00;
+}
+
+/* selected state */
+.selected {
+  outline: 1px solid #00ff00;
+  opacity: 1.0;
+  transform: scale(1.0);
+  filter: grayscale(0%);
+  filter: drop-shadow(0px 0px 3px #00ff00);
+
+}
+
+/* locked (progressive stage 0) */
+.locked {
+  opacity: 0.25;
+  filter: grayscale(100%);
+}
+
+/* ================= IMAGES ================= */
+
+/* Pixel-perfect small icons */
+.icon-small {
+  width: 52px;
+  height: 52px;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Staff portraits (smooth) */
+.icon-large {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  image-rendering: auto;
+}
+
+/* ================= STAFF TILE SIZE ================= */
+#staffGrid .item {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  background: #6e462e;
+}
+
+/* ================= COLLAPSIBLE ================= */
+.collapsible {
+  background: #6e462e;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.content.collapsed {
+  display: none;
+}
+
+/* ================= BUTTON FEEDBACK ================= */
+button:active {
+  transform: scale(0.92);
+}
+
+/* ================= TOOLTIP ================= */
+.tooltip {
+  position: absolute;
+  background: black;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+
+  pointer-events: none;
+  display: none;
+  z-index: 9999;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mystia's Izakaya Save Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Mystia's Izakaya Save Editor</h1>
+
+<!-- ================= IMPORT ================= -->
+<div class="section">
+  <h2>Import .memory Save</h2>
+
+  <input type="file" id="fileInput" accept=".memory,.json,.txt">
+
+  <button id="loadSaveBtn">Load Save</button>
+</div>
+
+<!-- ================= COOKWARE ================= -->
+<div class="section">
+  <h2 class="collapsible">Cookware</h2>
+
+  <div class="content">
+
+    <h3>Progressive</h3>
+    <div id="progressiveCookwareGrid" class="grid"></div>
+
+    <h3>Unique</h3>
+    <div id="uniqueCookwareGrid" class="grid"></div>
+
+  </div>
+</div>
+
+<!-- ================= ITEMS ================= -->
+<div class="section">
+  <h2 class="collapsible">Items</h2>
+
+  <div class="content">
+
+    <h3>Izakaya Items</h3>
+    <div id="itemGrid" class="grid"></div>
+
+    <h3>Clothing</h3>
+    <div id="clothingGrid" class="grid"></div>
+
+  </div>
+</div>
+
+<!-- ================= RECIPES ================= -->
+<div class="section">
+  <h2 class="collapsible">Recipes</h2>
+  <div class="content">
+    <div id="recipeGrid" class="grid"></div>
+  </div>
+</div>
+
+<!-- ================= UPGRADES ================= -->
+<div class="section">
+  <h2 class="collapsible">Izakaya Upgrades</h2>
+  <div class="content">
+    <div id="upgradeGrid" class="grid"></div>
+  </div>
+</div>
+
+<!-- ================= STAFF ================= -->
+<div class="section">
+  <h2 class="collapsible">Staff</h2>
+
+  <div class="content">
+    <div id="staffGrid" class="grid"></div>
+  </div>
+</div>
+
+<!-- ================= EXPORT ================= -->
+<div class="section">
+  <h2>Export Modified Save</h2>
+
+  <button id="exportBtn">Export .memory</button>
+  
+</div>
+
+<!-- ================= TOOLTIP ================= -->
+<div id="tooltip" class="tooltip"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
